@@ -5,10 +5,7 @@ export default class newsCard extends Component {
   render() {
     return (
       <div className="mycard col-sm">
-        <img
-          className="mycard-img-top"
-          src="https://via.placeholder.com/100"
-        ></img>
+        <img className="mycard-img-top" src=""></img>
 
         <h5 className="mycard-title">Card title has declared war on drugs</h5>
         <div className="date-source">

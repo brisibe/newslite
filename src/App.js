@@ -1,10 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+//import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import NewsCard from "./components/newsCard";
+import axios from "axios";
 
 function App() {
   const date = new Date();
+
+  const data = axios
+    .get(
+      "https://newsapi.org/v2/top-headlines?country=us&apiKey=b1f502747b7f432fae5be42e37ab32bd"
+    )
+    .then(res => console.log(res));
 
   return (
     <div className="App">
@@ -15,31 +22,23 @@ function App() {
       </div>
 
       <div className="main">
-        <Router>
-          <div className="menu-tab">
-            <ul className="container">
-              <Link>
-                <li>world</li>
-              </Link>
-              <Link>
-                <li>Nigerian</li>
-              </Link>
-              <Link>
-                <li>Sports</li>
-              </Link>
-            </ul>
-          </div>
-        </Router>
+        {/* <Router> */}
+        <div className="menu-tab">
+          <ul className="container">
+            {/* <Link> */}
+            <li>world</li>
+            {/* </Link> */}
+            {/* <Link> */}
+            <li>Nigerian</li>
+            {/* </Link> */}
+            {/* <Link> */}
+            <li>Sports</li>
+            {/* </Link> */}
+          </ul>
+        </div>
+        {/* </Router> */}
         <div className="main-info ">
           <div className="info container row">
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
-            <NewsCard />
             {/* <p>
               A graphic representation of data abstracted from the Chinese
               program’s thrust, a worrying impression of solid fluidity, as

@@ -26,7 +26,6 @@
 .main {
   display: flex;
   min-height: 100vh;
-  background-color: rgb(233, 233, 233);
 }
 
 .menu-tab {
@@ -53,11 +52,14 @@
   margin: 20px;
   height: 200px;
   width: 150px;
-  box-shadow: rgb(233, 232, 232) 1px 1px 1px;
+  box-shadow: rgb(233, 232, 232);
+  border: solid rgb(230, 230, 230) 0.5px;
+  border-radius: 5px;
 }
 
 .mycard-img-top {
   height: 100px;
+  padding-top: 5px;
   width: 100%;
 }
 
